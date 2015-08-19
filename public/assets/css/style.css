@@ -19,11 +19,11 @@ th {
 }
 
 tr:nth-child(even) {
-   background-color: #EEE;
+   background-color: #ecf0f1;
 }
 
 tr:hover {
-	background-color: #FFDFFF;
+	background-color: #bdc3c7;
 }
 
 /* typo */
@@ -37,6 +37,15 @@ h1 {
 h2 {
 	font-size: 120%;
 	margin: 5px 0;
+}
+
+a {
+	text-decoration: none;
+	color: #000;
+}
+
+a:hover {
+	color: #2980b9;
 }
 
 /* fin typo */
