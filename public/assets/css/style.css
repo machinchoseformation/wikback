@@ -26,6 +26,20 @@ tr:hover {
 	background-color: #bdc3c7;
 }
 
+/* forms */
+
+label {
+	display: block;
+	margin-top: 10px;
+}
+
+input {
+	display: block;
+	margin: 3px 0 1px 0;
+}
+
+/* end forms */
+
 /* typo */
 
 h1 {
@@ -37,6 +51,7 @@ h1 {
 h2 {
 	font-size: 120%;
 	margin: 5px 0;
+	font-weight: normal;
 }
 
 a {
