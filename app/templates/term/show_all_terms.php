@@ -15,7 +15,7 @@
 			<td><?= $this->e($term['id']) ?></td>
 			<td><?= $this->e($term['name']) ?></td>
 			<td><?= $this->e($term['modifiedDate']) ?></td>
-			<td></td>
+			<td><a href="<?php echo $this->url('delete_term', ['id' => $term['id']]); ?>" title="Effacer ce terme"><i class="fa fa-trash"></i> Effacer</a></td>
 		</tr>
 	<?php endforeach; ?>
 	</table>
