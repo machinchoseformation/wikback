@@ -1,5 +1,5 @@
 <?php
 	
 	$w_routes = array(
-		['GET', '/', 'Default#home', 'home'],
+		['GET', '/admin/termes/', 'Term#showAll', 'show_all_terms'],
 	);
