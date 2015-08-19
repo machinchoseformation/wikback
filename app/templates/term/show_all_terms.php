@@ -12,9 +12,9 @@
 		</tr>
 	<?php foreach($terms as $term): ?>
 		<tr>
-			<td><?php echo $term['id'] ?></td>
-			<td><?php echo $term['name'] ?></td>
-			<td><?php echo $term['modifiedDate'] ?></td>
+			<td><?= $this->e($term['id']) ?></td>
+			<td><?= $this->e($term['name']) ?></td>
+			<td><?= $this->e($term['modifiedDate']) ?></td>
 			<td></td>
 		</tr>
 	<?php endforeach; ?>
