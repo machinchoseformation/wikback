@@ -14,12 +14,21 @@
 		</thead>
 		<tbody>
 		<?php foreach($terms as $term): ?>
-			<tr>
+			<tr <?php if ($term['is_wotd']) echo 'class="wotd"'; ?>>
 				<td><?= $this->e($term['id']) ?></td>
 				<td><?= $this->e($term['name']) ?></td>
 				<td><?= $this->e($term['modifiedDate']) ?></td>
-				<td><a href="<?= $this->url('delete_term', ['id' => $term['id']]); ?>" title="Effacer ce terme"><i class="fa fa-trash"></i> Effacer</a></td>
-				<td><a href="<?= $this->url('edit_term', ['id' => $term['id']]); ?>" title="Modifier ce terme"><i class="fa fa-pencil"></i> Modifier</a></td>
+				<td>
+					<a href="<?= $this->url('delete_term', ['id' => $term['id']]); ?>" title="Effacer ce terme">
+						<i class="fa fa-trash"></i> Effacer
+					</a>
+					<a href="<?= $this->url('edit_term', ['id' => $term['id']]); ?>" title="Modifier ce terme">
+						<i class="fa fa-pencil"></i> Modifier
+					</a>
+					<a href="<?= $this->url('change_wotd', ['id' => $term['id']]); ?>" title="Choisir ce terme comme MDJ">
+						<i class="fa fa-star"></i> WOTD !
+					</a>
+				</td>
 			</tr>
 		<?php endforeach; ?>
 		</tbody>

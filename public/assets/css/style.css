@@ -26,6 +26,10 @@ tr:hover {
 	background-color: #bdc3c7;
 }
 
+tr.wotd {
+	background-color: pink;
+}
+
 /* forms */
 
 label {
