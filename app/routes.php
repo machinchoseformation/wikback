@@ -13,4 +13,7 @@
 
 		//change le mot du jour
 		['GET', '/admin/termes/nouveau-mdj/[i:id]/', 'Term#changeWotd', 'change_wotd'],
+
+		//crée un nouvel administrateur
+		['GET|POST', '/admin/administrateurs/inscription/', 'User#register', 'register_administrator'],
 	);

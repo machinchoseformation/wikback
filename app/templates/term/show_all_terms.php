@@ -1,6 +1,11 @@
 <?php $this->layout('layout', ['title' => 'Tous les termes']) ?>
 
 <?php $this->start('main_content') ?>
+
+	<a href="<?= $this->url('register_administrator'); ?>" title="Inscrire un nouvel administateur">
+		Inscrire un nouvel administateur</a>
+
+
 	<h2>Tous les termes.</h2>
 	
 	<table>
