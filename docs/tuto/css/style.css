@@ -1,0 +1,34 @@
+html, body {
+	font-family: 'Roboto', sans-serif;
+}
+
+pre {
+	font-size: 16px;
+}
+
+span.code {
+	font-family: Consolas,Monaco,"Andale Mono","Ubuntu Mono",monospace;
+	color: #000;
+	background-color: #FCFAF0;
+}
+
+h3 {
+	border-bottom: 1px dotted #000;
+}
+
+h4 {
+	text-transform: uppercase;
+}
+
+a {
+	color: #c0392b;
+}
+
+a:hover {
+	color: #2980b9;
+}
+
+.nav > li > a:hover, .nav > li > a:focus {
+	background-color: #272822;
+	color: #f8f8f2;
+}
