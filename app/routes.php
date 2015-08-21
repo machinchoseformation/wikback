@@ -16,4 +16,10 @@
 
 		//crée un nouvel administrateur
 		['GET|POST', '/admin/administrateurs/inscription/', 'User#register', 'register_administrator'],
+
+		//connexion
+		['GET|POST', '/admin/connexion/', 'User#login', 'login'],
+
+		//déconnexion
+		['GET', '/admin/deconnexion/', 'User#logout', 'logout'],
 	);

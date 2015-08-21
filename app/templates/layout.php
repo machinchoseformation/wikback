@@ -13,6 +13,11 @@
 	<div class="container">
 		<header>
 			<h1>Wikébec Admin :: <?= $this->e($title) ?></h1>
+
+			<?php if ($w_user): ?>
+				<p>Bonjour <?= $w_user['username']; ?></p>
+				<a href="<?= $this->url('logout'); ?>" title="Déconnexion">Déconnexion</a>
+			<?php endif; ?>
 		</header>
 
 		<section>

@@ -13,6 +13,8 @@ class TermController extends Controller
 	 */
 	public function showAll()
 	{
+		$this->allowTo('admin');
+
 		$termManager = new \Manager\TermManager();
 		$terms = $termManager->findAll("modifiedDate", "DESC");
 
@@ -23,13 +25,19 @@ class TermController extends Controller
 
 	public function delete($id)
 	{
+		$this->allowTo('admin');
+
 		$termManager = new \Manager\TermManager();
 		$termManager->delete($id);
 
 		$this->redirectToRoute('show_all_terms');
 	}
 
-	public function edit($id){
+	public function edit($id)
+	{
+		$this->allowTo('admin');
+
+		$user = $this->getUser();
 
 		$termManager = new \Manager\TermManager();
 
@@ -67,6 +75,8 @@ class TermController extends Controller
 
 	public function changeWotd($id)
 	{
+		$this->allowTo('admin');
+
 		$termManager = new \Manager\TermManager();
 
 		//sélectionner le mot du jour actuel
