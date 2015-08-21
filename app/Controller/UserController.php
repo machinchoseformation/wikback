@@ -29,10 +29,21 @@ class UserController extends Controller
 				$error = "Pseudo trop court";
 			}
 
+			//username déjà présent ?
+			if($userManager->usernameExists($username)){
+				$error = "Pseudo déjà utilisé !";
+			}
+
 			//email valide
 			if (!filter_var($email, FILTER_VALIDATE_EMAIL)){
 				$error = "Email non valide !";
 			}
+
+			//email déjà présent ?
+			if($userManager->emailExists($email)){
+				$error = "Email déjà utilisé !";
+			}
+
 
 			//mots de passe correspondent ?
 			if ($password != $password_confirm){
